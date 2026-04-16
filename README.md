@@ -76,7 +76,8 @@ Follow these steps to run the project on your system:
 1. Download or clone the repository:
 
 ```
-git clone https://github.com/your-username/smart-mart-billing-system.git
+git clone https://github.com/ishwar261-oss/Smart-Mart-Billing-System.git
+
 ```
 
 2. Open the project in **Visual Studio**.
