@@ -68,23 +68,6 @@ This project demonstrates practical implementation of **Object-Oriented Programm
 
 ---
 
-# 📷 Screenshots
-
-Add screenshots of your application here.
-
-Examples:
-
-* Login Page
-* Dashboard
-* Product Management Form
-* Billing Form
-* Invoice Output
-
-```
-(Add your screenshots in an images folder and link them here)
-```
-
----
 
 # ⚙️ Installation Guide
 
@@ -163,8 +146,7 @@ Through this project, the following skills were developed:
 
 # 👨‍💻 Author
 
-**Idz**
-Aspiring Software Developer | C# Developer | Problem Solver
+**@IDzz**
 
 ---
 
