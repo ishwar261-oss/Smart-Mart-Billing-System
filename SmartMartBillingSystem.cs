@@ -16,7 +16,7 @@ namespace SmartMartBillingSystem
         int Item_No = 0;
         double Total_Amount = 0;
         double Discount_Amount = 0;
-        double Store_Discount = 8;  // Our Stores Gives 8% Discount over Total Amount 
+        double Store_Discount = 8; 
         double cgst = 0;
         double sgst = 0;
         double SGSTRate = 2.5;
@@ -89,37 +89,7 @@ namespace SmartMartBillingSystem
 
         }
 
-        private void Button4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void tnEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PnlItmEtry_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-        private void pnlItmEtry_Paint(object sender, EventArgs e)
-        {
-
-        }
-        private void lblbilldtlTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
         private void btnRemoveItm_Click(object sender, EventArgs e)
         {
             if (dgvItems.Rows.Count == 0)
@@ -150,7 +120,6 @@ namespace SmartMartBillingSystem
             lblChange.Text = "Change Return : ₹ 0.00";
         }
 
-        // Method of Edit Item Button Click Event
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dgvItems.SelectedRows.Count == 0)
@@ -161,18 +130,14 @@ namespace SmartMartBillingSystem
 
             DataGridViewRow row = dgvItems.SelectedRows[0]; // Get Selected Row..
 
-            //Saves the index of the selected row so we know which row to update later.
+           
             Edit_RowIndex = row.Index;
-
-            //Puts the selected items name, quantity, and price back into the input controls for editing.
             txtItemName.Text = row.Cells[1].Value.ToString();
             ndeQty.Value = Convert.ToInt32(row.Cells[2].Value);
             txtPrice.Text = row.Cells[3].Value.ToString();
 
-            //Subtracts the old item total so it not be counted twice when updated. (remove old total of item)
             Total_Amount -= Convert.ToDouble(row.Cells[4].Value);
 
-            //Prevents adding a new item while editing
             btnAddItem.Enabled = false;
         }
         private void button4_Click(object sender, EventArgs e)
@@ -180,18 +145,13 @@ namespace SmartMartBillingSystem
             if (Edit_RowIndex == -1)
                 return;
 
-            // Getting Edited Values from Input Controls..
             string Item_name = txtItemName.Text;
             int Qty = (int)ndeQty.Value;
             double Price = Convert.ToDouble(txtPrice.Text);
 
-            // Calculating Total for Edited Item..
             double Total = Qty * Price;
-
-            // Getting the Row to be Edited using Saved Row Index..
             DataGridViewRow row = dgvItems.Rows[Edit_RowIndex];
 
-            // Assigning Edited Values to the Selected Row.. to update
             row.Cells[1].Value = Item_name;
             row.Cells[2].Value = Total;
             row.Cells[3].Value = Price;
@@ -199,21 +159,17 @@ namespace SmartMartBillingSystem
 
             Total_Amount += Total; // updates all payable amoutn labl
 
-            // Calculate All Amounts Again After Editing Item..
             Calculate_Amount();
 
-            // Reset Edit State
             Edit_RowIndex = -1;
 
             btnAddItem.Enabled = true; // Enable Add Item Button Again..
 
-            // Clear Inputs Contros to take input for other items..
             txtItemName.Clear();
             txtPrice.Clear();
             ndeQty.Value = 1;
 
-            txtItemName.Focus(); // take cursor again to first textbox..
-
+            txtItemName.Focus(); 
         }
 
         private void btnNew_Bill_Click(object sender, EventArgs e)
@@ -265,30 +221,8 @@ namespace SmartMartBillingSystem
                 Application.Exit();
             }
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlSumShow_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblChange_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
