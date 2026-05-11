@@ -14,21 +14,5 @@ namespace SmartMartBillingSystem
         {
             InitializeComponent();
         }
-
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlheading_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblHeading_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
